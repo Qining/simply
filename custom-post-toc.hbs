@@ -18,6 +18,14 @@
             <div class="mb-3 text-white tracking-wider text-sm">
                 {{#primary_tag}}<a class="uppercase hover:underline" href="{{url}}">{{name}}</a>{{/primary_tag}}
             </div>
+            <div class="only-desktop">
+                  {{#foreach tags}}
+                    {{#if @index}}
+                    <span class="m-heading__meta__divider">/</span>
+                    <a href="{{url}}" class="m-heading__meta__tag">{{name}}</a>
+                    {{/if}}
+                  {{/foreach}}
+            </div>
             {{/if}}
 
             <h1 class="post-title mb-5 text-white text-4xl lg:text-5xl leading-tight">{{title}}</h1>
